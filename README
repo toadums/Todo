@@ -1,0 +1,5 @@
+To run: 
+
+$ ./go.sh
+
+The app runs on port 4000
