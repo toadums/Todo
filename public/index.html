@@ -1,0 +1,43 @@
+<html>
+	<head>
+
+		<title>Todo List</title>
+		
+		<link rel='stylesheet' type='text/css' href='todo.css'> 
+		<script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+		<script type='text/javascript' src='knockout-2.2.1.js'></script>
+		<script type='text/javascript' src='todoKO.js'></script>
+
+	</head>
+
+	<body>
+
+		<input type='text' id='newTask' class='span1' placeholder='Add New Task'> <button type='button' id='addNewBtn' class='btn'>Add New Task</button>
+		
+		<div class='tableTitle' data-bind="visible: incomplete().length > 0">Incomplete Tasks</div>
+		<div class='divTable' id='incompleteTable' data-bind="foreach: incomplete">
+			<div class='row'>
+				<div class="span1">
+					<input type='checkbox' class='toggle' data-bind="click: $root.completeTask">
+					<div class='task incomplete' data-bind="text: description"></div>
+				</div>
+				<button type='button' class='deleteBtn btn' data-bind="click: $root.delete"> Delete </button>
+			</div>
+
+		</div>
+
+		<div class='tableTitle' data-bind="visible: complete().length > 0">Completed Tasks</div>
+		<div class='divTable' id='completeTable' data-bind="foreach: complete">
+			<div class='row'>
+				<div class="span1">
+					<input type='checkbox' class='toggle' data-bind="click: $root.uncompleteTask" checked>
+					<div class='task complete' data-bind="text: description"></div>
+				</div>
+				<button type='button' class='deleteBtn btn' data-bind="click: $root.delete"> Delete </button>
+
+			</div>
+		</div>
+
+	</body>
+
+</html>

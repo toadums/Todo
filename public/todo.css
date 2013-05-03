@@ -1,0 +1,60 @@
+body{
+	font-family: Monaco, Consolas, "Lucida Console", monospace;
+	background-color: #F5F5F5;
+}
+
+.todoID{
+	display: inline-block;
+	padding: 10px 5px;
+	width: 10%;
+
+}
+
+.task{
+	display: inline-block;
+	padding: 10px 5px;
+	width: 70%;
+}
+
+.complete{
+	color: #BBBBBB;
+	text-decoration: line-through;
+}
+
+.entryForm{
+	margin-top: 20px;
+}
+
+.divTable{
+}
+
+.tableTitle{
+	color: red;
+	margin-top: 48px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+
+.btn{
+	width: 18%;
+	padding: 9px;
+}
+
+#newTask{
+	padding: 9px;
+}
+
+.row{
+	display: block;
+	border-top: 1px solid #BBBBBB;
+}
+
+.row:last-child{
+	border-bottom: 1px solid #BBBBBB;
+}
+
+.span1{
+	width: 80%;
+	display: inline-block;
+}
